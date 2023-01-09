@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>log-in</title>
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="../css/login-form.css" />
+    <form action="index.html" class="login-form">
+      <h1>login</h1>
+
+      <div class="txtb">
+        <input type="text" />
+        <span data-placeholder="username"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="password" />
+        <span data-placeholder="password"></span>
+      </div>
+
+      <input type="submit" class="logbtn" value="login" />
+
+      <div class="buttom-text">
+        Don't have account ? <a herf="#"> sign up </a>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $(".txtb input").on("focus", function () {
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur", function () {
+        if ($(this).val() == "") $(this).removeClass("focus");
+      });
+    </script>
+  </body>
+</html>
